@@ -82,6 +82,7 @@ const HeroSection = () => {
           <SwipingFromLeftAnimation delay={1.2}>
             <CardMedia
               component='img'
+              loading='lazy'
               sx={{
                 height: { md: 570, lg: 590 },
                 left: { md: '-0px', lg: '100px' },
