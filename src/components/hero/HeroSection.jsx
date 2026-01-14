@@ -9,10 +9,29 @@ import HeroSectionTitle from '../../UI/components/HeroSection/HeroSectionTitle';
 import HeroSectionParagraph from '../../UI/components/HeroSection/HeroSectionParagraph';
 import AppearingAnimation from '../../UI/Animations/AppearingAnimation';
 import SwipingFromLeftAnimation from '../../UI/Animations/SwipingFromLeftAnimation';
+import heroImage from '../../assets/hero.jpg';
 
 const HeroSection = () => {
   return (
     <Box component='section' sx={heroSectionContainer}>
+      <Box
+        component='img'
+        src={heroImage}
+        alt='Hero background'
+        // loading='lazy'
+        loading='eager'
+        fetchpriority='high'
+        decoding='async'
+        sx={{
+          position: 'absolute',
+          inset: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          zIndex: 0,
+        }}
+      />
+
       {/* Overlay */}
       <Box sx={heroSectionOverlay} />
 
